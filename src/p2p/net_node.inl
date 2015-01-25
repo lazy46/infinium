@@ -194,12 +194,13 @@ namespace nodetool
   template<class t_payload_net_handler>
   bool node_server<t_payload_net_handler>::init(const boost::program_options::variables_map& vm, bool testnet)
   {
-    if (!testnet) {
-      //TODO add seed for your network
-      // ADD_HARDCODED_SEED_NODE("62.113.238.118:27854");
+    if (!testnet) 
+    {
+      // Valid Seed Nodes
       ADD_HARDCODED_SEED_NODE("178.62.79.220:27854");       // Nimoria Seed Node 01
-      
-    } else {
+    } 
+    else 
+    {
       m_network_id.data[0] += 1;
     }
 
